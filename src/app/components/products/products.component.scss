@@ -1,0 +1,9 @@
+.card {
+  display: flex;
+  flex-direction: row;
+
+  .product-img {
+    width: 150px;
+    height: 150px;
+  }
+}
