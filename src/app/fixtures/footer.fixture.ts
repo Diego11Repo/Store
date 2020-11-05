@@ -2,6 +2,9 @@ import {
   faFacebook,
   faTwitter,
   faWhatsapp,
+  faYoutube,
+  faTiktok,
+  faTwitch,
 } from '@fortawesome/free-brands-svg-icons';
 import { FooterInterface } from '../interfaces/footer.interface';
 
@@ -18,5 +21,14 @@ export const footerFixtures: FooterInterface[] = [
   },
   {
     icon: faWhatsapp,
+  },
+  {
+    icon: faYoutube,
+  },
+  {
+    icon: faTiktok,
+  },
+  {
+    icon: faTwitch,
   },
 ];

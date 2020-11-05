@@ -3,6 +3,11 @@
   position: fixed;
   bottom: 0;
 
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+
   .icons {
     color: white;
     width: 30px;
