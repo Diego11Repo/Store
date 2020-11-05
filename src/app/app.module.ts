@@ -11,6 +11,9 @@ import { ProductsComponent } from "./components/products/products.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { LoginComponent } from "./components/login/login.component";
 import { WelcomeComponent } from "./components/welcome/welcome.component";
+import { PromotionsComponent } from './components/promotions/promotions.component';
+import { MostLikedComponent } from './components/most-liked/most-liked.component';
+import { BooksComponent } from './components/books/books.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { WelcomeComponent } from "./components/welcome/welcome.component";
     ProductsComponent,
     LoginComponent,
     WelcomeComponent,
+    PromotionsComponent,
+    MostLikedComponent,
+    BooksComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,32 +1,41 @@
-import { MenuInterface } from "../interfaces/menu.interface";
+import { MenuInterface } from '../interfaces/menu.interface';
 import {
-  faBars,
+  faHome,
   faBook,
   faGift,
   faLaptop,
   faShoppingCart,
   faThumbsUp,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
 /**
  * Menu fixtures
  */
 export const menuFixtures: MenuInterface[] = [
   {
-    name: "Products",
+    name: 'Home',
+    icon: faHome,
+    path: 'welcome',
+  },
+  {
+    name: 'Products',
     icon: faLaptop,
+    path: 'products',
   },
   {
-    name: "Promotions",
+    name: 'Promotions',
     icon: faGift,
+    path: 'promotions',
   },
   {
-    name: "Most Liked",
+    name: 'Most Liked',
     icon: faThumbsUp,
+    path: 'liked',
   },
   {
-    name: "Books",
+    name: 'Books',
     icon: faBook,
+    path: 'books',
   },
 ];
 
@@ -35,7 +44,7 @@ export const menuFixtures: MenuInterface[] = [
  */
 export const sideMenuFixtures: MenuInterface[] = [
   {
-    name: "Cart",
+    name: 'Cart',
     icon: faShoppingCart,
   },
 ];
