@@ -1,13 +1,25 @@
 <app-header></app-header>
-<div class="card">
-  <div class="card-body" *ngFor="let product of products">
-    <h5 class="card-title">
-      {{ product.name }}
-    </h5>
-    <img src="{{ product.img }}" class="product-img" />
-    <div>
-      {{ product.price }}
-    </div>
-  </div>
-</div>
+<table class="table">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <th scope="row">{{ product.id }}</th>
+        <td>
+          {{ product.name }}
+          <img src="{{ product.img }}" class="product-img" />
+        </td>
+        <td></td>
+        <td>{{ product.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+</table>
 <app-footer></app-footer>
