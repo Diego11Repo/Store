@@ -21,4 +21,9 @@ export interface ProductsInterface {
    * Product image
    */
   image: string;
+
+  /**
+   * Product description
+   */
+  description: string;
 }

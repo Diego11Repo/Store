@@ -6,4 +6,17 @@
     width: 150px;
     height: 150px;
   }
+
+  .box {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+    .product-name {
+      font-weight: bold;
+    }
+  }
+
+  .description {
+    width: 50%;
+  }
 }

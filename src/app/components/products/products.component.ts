@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ProductService } from '../../services/product.service';
-import { ProductsInterface } from '../../interfaces/products.interface'
+import { ProductsInterface } from '../../interfaces/products.interface';
+import { productTableFixture } from '../../fixtures/product-table.fixture';
 
 /**
  * Angular Decorator
@@ -9,30 +10,33 @@ import { ProductsInterface } from '../../interfaces/products.interface'
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  styleUrls: ['./products.component.scss'],
 })
 /**
  * Products Component class
  */
 export class ProductsComponent implements OnInit {
-
   /**
-   * Variable product for 
+   * Variable product
    */
   products: ProductsInterface[];
 
   /**
-   * Constructor
-   * @param productsService 
+   * Table headers
    */
-  constructor(
-    private productsService: ProductService
-  ) {}
+  headers: Array<string>;
+
+  /**
+   * Constructor
+   * @param productsService
+   */
+  constructor(private productsService: ProductService) {}
 
   /**
    * ngOnInit funcition
    */
   ngOnInit(): void {
+    this.headers = productTableFixture;
     this.fetchProducts();
   }
 
@@ -40,9 +44,8 @@ export class ProductsComponent implements OnInit {
    * Function fetchProducts for bring all products
    */
   fetchProducts() {
-    this.productsService.getAllProducts()
-    .subscribe(products => {
+    this.productsService.getAllProducts().subscribe((products) => {
       this.products = products;
-    })
+    });
   }
 }

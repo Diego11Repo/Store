@@ -2,22 +2,20 @@
 <table class="table">
   <table class="table table-bordered">
     <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Product</th>
-        <th scope="col">Description</th>
-        <th scope="col">Price</th>
+      <tr class="table-primary">
+        <th scope="col" *ngFor="let header of headers">{{ header }}</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let product of products">
-        <th scope="row">{{ product.id }}</th>
-        <td>
+      <tr *ngFor="let product of products" class="box">
+        <td class="product-name align-middle">
           {{ product.name }}
+        </td>
+        <td>
           <img src="{{ product.img }}" class="product-img" />
         </td>
-        <td></td>
-        <td>{{ product.price }}</td>
+        <td class="description">{{ product.description }}</td>
+        <td>$ {{ product.price }}</td>
       </tr>
     </tbody>
   </table>
