@@ -1,3 +1,4 @@
+<app-modal *ngIf="isShowed"></app-modal>
 <app-header></app-header>
 <table class="table">
   <table class="table table-bordered">
@@ -16,6 +17,17 @@
         </td>
         <td class="description">{{ product.description }}</td>
         <td>$ {{ product.price }}</td>
+        <td class="manage">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal"
+            (click)="handleEdit(product.id)"
+          >
+            Edit Item
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

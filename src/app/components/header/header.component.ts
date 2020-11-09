@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MenuInterface } from '../../interfaces/menu.interface';
-import { menuFixtures, sideMenuFixtures } from '../../fixtures/menu.fixture';
+import { menuFixtures } from '../../fixtures/menu.fixture';
 
 /**
  * Angular decorator
@@ -20,15 +20,9 @@ export class HeaderComponent implements OnInit {
    */
   menu: MenuInterface[];
 
-  /**
-   * Side items
-   */
-  sideMenu: MenuInterface[];
-
   constructor() {}
 
   ngOnInit(): void {
     this.menu = menuFixtures;
-    this.sideMenu = sideMenuFixtures;
   }
 }

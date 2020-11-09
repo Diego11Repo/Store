@@ -38,13 +38,3 @@ export const menuFixtures: MenuInterface[] = [
     path: 'books',
   },
 ];
-
-/**
- * Collapse menu fixtures
- */
-export const sideMenuFixtures: MenuInterface[] = [
-  {
-    name: 'Cart',
-    icon: faShoppingCart,
-  },
-];

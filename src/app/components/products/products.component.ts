@@ -27,6 +27,11 @@ export class ProductsComponent implements OnInit {
   headers: Array<string>;
 
   /**
+   * Variable for show or hide modal
+   */
+  isShowed: boolean;
+
+  /**
    * Constructor
    * @param productsService
    */
@@ -48,4 +53,11 @@ export class ProductsComponent implements OnInit {
       this.products = products;
     });
   }
+
+  /**
+   * Function on click in edit product
+   */
+  handleEdit = (id: number) => {
+    this.productsService.editProduct(id);
+  };
 }

@@ -14,6 +14,7 @@ import { WelcomeComponent } from "./components/welcome/welcome.component";
 import { PromotionsComponent } from './components/promotions/promotions.component';
 import { MostLikedComponent } from './components/most-liked/most-liked.component';
 import { BooksComponent } from './components/books/books.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { BooksComponent } from './components/books/books.component';
     PromotionsComponent,
     MostLikedComponent,
     BooksComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,4 +19,15 @@
   .description {
     width: 50%;
   }
+
+  .manage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: none;
+
+    .btn {
+      width: 75%;
+    }
+  }
 }

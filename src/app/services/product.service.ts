@@ -12,4 +12,8 @@ export class ProductService {
   getAllProducts() {
     return this.http.get<ProductsInterface[]>('http://localhost:3000/products');
   }
+
+  editProduct = (id: number) => {
+    console.log('Llegando al servicio');
+  };
 }
