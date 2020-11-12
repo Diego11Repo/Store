@@ -15,6 +15,7 @@ import { PromotionsComponent } from './components/promotions/promotions.componen
 import { MostLikedComponent } from './components/most-liked/most-liked.component';
 import { BooksComponent } from './components/books/books.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { EditComponent } from './components/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ModalComponent } from './components/modal/modal.component';
     MostLikedComponent,
     BooksComponent,
     ModalComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

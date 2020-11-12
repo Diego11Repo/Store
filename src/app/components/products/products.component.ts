@@ -58,6 +58,7 @@ export class ProductsComponent implements OnInit {
    * Function on click in edit product
    */
   handleEdit = (id: number) => {
-    this.productsService.editProduct(id);
+    this.isShowed = true;
+    this.productsService.getProduct(id);
   };
 }

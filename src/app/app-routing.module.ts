@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BooksComponent } from './components/books/books.component';
+import { EditComponent } from './components/edit/edit.component';
 import { LoginComponent } from './components/login/login.component';
 import { MostLikedComponent } from './components/most-liked/most-liked.component';
 import { ProductsComponent } from './components/products/products.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent,
+  },
+  {
+    path: 'edit',
+    component: EditComponent,
   },
   {
     path: 'promotions',

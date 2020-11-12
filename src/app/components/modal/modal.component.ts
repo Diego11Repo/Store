@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal',
@@ -6,7 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  constructor() {}
+  /**
+   * Product id received
+   */
+  @Input() id: number;
+
+  /**
+   *
+   * @param router For router service
+   */
+  constructor(private readonly router: Router) {}
 
   ngOnInit(): void {}
+
+  handleYes = () => {
+    this.router.navigate(['edit']);
+  };
 }

@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="edit-container">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Product Name</span>
+    </div>
+    <textarea
+      class="form-control"
+      aria-label="With textarea"
+      id="product-name"
+      placeholder="{{ product.name }}"
+    ></textarea>
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Image URL</span>
+    </div>
+    <textarea
+      class="form-control"
+      aria-label="With textarea"
+      placeholder="{{ product.img }}"
+      id="product-img"
+    ></textarea>
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Description</span>
+    </div>
+    <textarea
+      class="form-control"
+      aria-label="With textarea"
+      placeholder="{{ product.description }}"
+      id="product-description"
+    ></textarea>
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Price</span>
+    </div>
+    <textarea
+      class="form-control"
+      aria-label="With textarea"
+      placeholder="$ {{ product.price }}"
+      id="product-price"
+    ></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+    Submit
+  </button>
+</div>
+<app-footer></app-footer>
