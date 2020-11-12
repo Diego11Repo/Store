@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ProductService } from 'src/app/services/product.service';
 
@@ -17,21 +18,30 @@ export class EditComponent implements OnInit {
   product: any;
 
   /**
-   * Variable for show modal
+   * Variable for show progress status
    */
-  showModal: boolean;
+  onProgress: boolean;
+
+  /**
+   * Variable for show the succes status
+   */
+  onSuccess: boolean;
 
   /**
    *
    * @param productService Product Service
    */
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private readonly router: Router
+  ) {}
 
   /**
    * Executes on init
    */
   ngOnInit(): void {
-    this.showModal = false;
+    this.onProgress = false;
+    this.onSuccess = false;
     this.initProduct();
   }
 
@@ -55,7 +65,7 @@ export class EditComponent implements OnInit {
    * Executes on submit the product edited
    */
   onSubmit() {
-    this.showModal = true;
+    this.onProgress = true;
     const productName = (<HTMLInputElement>(
       document.querySelector('#product-name')
     )).value;
@@ -108,7 +118,21 @@ export class EditComponent implements OnInit {
     this.productService
       .editProduct(this.product.id, productUpdated)
       .subscribe((product) => {
-        console.log(product);
+        return product;
       });
+    setTimeout(() => {
+      this.onProgress = false;
+      this.showSuccess();
+    }, 1500);
+  }
+
+  /**
+   * Show success status
+   */
+  showSuccess() {
+    this.onSuccess = true;
+    setTimeout(() => {
+      this.router.navigate(['/products']);
+    }, 4000);
   }
 }

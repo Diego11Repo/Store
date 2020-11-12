@@ -48,4 +48,8 @@
     Submit
   </button>
 </div>
+<div *ngIf="onProgress" class="progress-spinner">
+  <mat-spinner></mat-spinner>
+</div>
+<div class="success" *ngIf="onSuccess">Edition Completed !</div>
 <app-footer></app-footer>
