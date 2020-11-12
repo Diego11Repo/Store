@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FooterInterface } from '../../interfaces/footer.interface';
-import { footerFixtures } from '../../fixtures/footer.fixture';
+import {
+  FooterIconsInterface,
+  FooterLabelInterface,
+} from '../../interfaces/footer.interface';
+import {
+  footerIconsFixtures,
+  footerLabelFixture,
+} from '../../fixtures/footer.fixture';
 
 /**
  * Angular Decorator
@@ -9,23 +15,28 @@ import { footerFixtures } from '../../fixtures/footer.fixture';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
 })
 
 /**
  * Footer class component
  */
 export class FooterComponent implements OnInit {
+  /**
+   * Icons for footer
+   */
+  icons: FooterIconsInterface[];
 
   /**
-   * Labels for footer
+   * Label for footer
    */
-  labels: FooterInterface[]
+  label: FooterLabelInterface;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    this.labels = footerFixtures;
+    this.icons = footerIconsFixtures;
+    this.label = footerLabelFixture;
+    console.log(this.icons);
   }
-
 }

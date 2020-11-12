@@ -1,10 +1,8 @@
 <footer class="py-4 bg-dark footer">
   <div class="container">
-    <fa-icon
-      [icon]="footerLabels.icon"
-      *ngFor="let footerLabels of labels"
-      class="icons"
-    ></fa-icon>
+    <a *ngFor="let icon of icons" href="{{ icon.ref }}" target="blank">
+      <fa-icon [icon]="icon.icon" class="icons"></fa-icon>
+    </a>
   </div>
-  <p class="m-0 text-center text-white">Copyright &copy; EXAGONO 2020</p>
+  <p class="m-0 text-center text-white">{{ label.label }}</p>
 </footer>

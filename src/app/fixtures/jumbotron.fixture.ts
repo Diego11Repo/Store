@@ -5,5 +5,6 @@ import { JumbotronInterface } from '../interfaces/jumbotron.interface';
  */
 export const jumbotronFixture: JumbotronInterface = {
   title: 'Welcome !',
-  subtitle: 'In this store you can manage your shopping cart, view all the products in the store, view the promotions, view our books and view the most liked products'
-} 
+  subtitle:
+    'In this system you can manage your products provided by an API-REST, view all the products and enjoy edit them.',
+};
