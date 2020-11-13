@@ -1,14 +1,21 @@
-import { Component, OnInit } from "@angular/core";
-import { JumbotronInterface } from "src/app/interfaces/jumbotron.interface";
-import { jumbotronFixture } from "../../fixtures/jumbotron.fixture";
+import { Component, OnInit } from '@angular/core';
+
+import {
+  JumbotronInterface,
+  JumbotronListInterface,
+} from 'src/app/interfaces/jumbotron.interface';
+import {
+  jumbotronFixture,
+  jumbotronListFixture,
+} from '../../fixtures/jumbotron.fixture';
 
 /**
  * Angular decorator
  */
 @Component({
-  selector: "app-jumbotron",
-  templateUrl: "./jumbotron.component.html",
-  styleUrls: ["./jumbotron.component.scss"],
+  selector: 'app-jumbotron',
+  templateUrl: './jumbotron.component.html',
+  styleUrls: ['./jumbotron.component.scss'],
 })
 
 /**
@@ -20,9 +27,15 @@ export class JumbotronComponent implements OnInit {
    */
   labels: JumbotronInterface;
 
+  /**
+   * Labels for list
+   */
+  list: JumbotronListInterface[];
+
   constructor() {}
 
   ngOnInit(): void {
     this.labels = jumbotronFixture;
+    this.list = jumbotronListFixture;
   }
 }

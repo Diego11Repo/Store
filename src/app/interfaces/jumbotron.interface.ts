@@ -12,3 +12,18 @@ export interface JumbotronInterface {
    */
   subtitle: string;
 }
+
+/**
+ * List of jumbotron
+ */
+export interface JumbotronListInterface {
+  /**
+   * Icon
+   */
+  img: string;
+
+  /**
+   * Name
+   */
+  name: string;
+}

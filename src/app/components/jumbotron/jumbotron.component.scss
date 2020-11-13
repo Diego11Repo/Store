@@ -1,0 +1,21 @@
+.jumbotron-container {
+  width: 40%;
+  margin-bottom: 20%;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+
+  .list-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 10vh;
+    list-style: none;
+    font-size: 20px;
+    align-items: center;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

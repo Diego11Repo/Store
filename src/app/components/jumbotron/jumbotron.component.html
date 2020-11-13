@@ -4,3 +4,12 @@
     {{ labels.subtitle }}
   </p>
 </div>
+<div class="jumbotron jumbotron-container">
+  <h1 class="display-3">This project used:</h1>
+  <ul>
+    <div *ngFor="let item of list" class="list-container">
+      <img src="{{ item.img }}" />
+      <li>{{ item.name }}</li>
+    </div>
+  </ul>
+</div>

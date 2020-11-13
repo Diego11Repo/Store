@@ -22,19 +22,4 @@ export const menuFixtures: MenuInterface[] = [
     icon: faLaptop,
     path: 'products',
   },
-  {
-    name: 'Promotions',
-    icon: faGift,
-    path: 'promotions',
-  },
-  {
-    name: 'Most Liked',
-    icon: faThumbsUp,
-    path: 'liked',
-  },
-  {
-    name: 'Books',
-    icon: faBook,
-    path: 'books',
-  },
 ];
