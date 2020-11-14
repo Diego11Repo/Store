@@ -140,5 +140,8 @@ export class ModalComponent implements OnInit, OnDestroy {
       return product;
     });
     this.modalService.setModalStatus(false);
+    setTimeout(() => {
+      location.reload();
+    }, 1500);
   };
 }
