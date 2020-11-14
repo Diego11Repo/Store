@@ -37,6 +37,5 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.icons = footerIconsFixtures;
     this.label = footerLabelFixture;
-    console.log(this.icons);
   }
 }

@@ -26,6 +26,15 @@
     align-items: center;
     border-bottom: none;
 
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 90px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     .btn {
       width: 75%;
     }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { ProductsInterface } from '../../interfaces/products.interface';
 import { productTableFixture } from '../../fixtures/product-table.fixture';
+import { ModalService } from 'src/app/services/modal.service';
 
 /**
  * Angular Decorator
@@ -27,15 +28,13 @@ export class ProductsComponent implements OnInit {
   headers: Array<string>;
 
   /**
-   * Variable for show or hide modal
-   */
-  isShowed: boolean;
-
-  /**
    * Constructor
    * @param productsService
    */
-  constructor(private productsService: ProductService) {}
+  constructor(
+    private productsService: ProductService,
+    private modalService: ModalService
+  ) {}
 
   /**
    * ngOnInit funcition
@@ -58,7 +57,17 @@ export class ProductsComponent implements OnInit {
    * Function on click in edit product
    */
   handleEdit = (id: number) => {
-    this.isShowed = true;
+    this.modalService.setModalLabel('edit');
+    this.modalService.setModalStatus(true);
+    this.productsService.getProduct(id);
+  };
+
+  /**
+   * Function on click in delete product
+   */
+  handleDelete = (id: number) => {
+    this.modalService.setModalLabel('delete');
+    this.modalService.setModalStatus(true);
     this.productsService.getProduct(id);
   };
 }

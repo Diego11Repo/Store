@@ -32,7 +32,10 @@ export class ProductService {
   }
 
   editProduct(id: number, changes: any) {
-    console.log(changes);
     return this.http.put(`http://localhost:3000/products/${id}`, changes);
+  }
+
+  deleteProduct(id: number) {
+    return this.http.delete(`http://localhost:3000/products/${id}`);
   }
 }

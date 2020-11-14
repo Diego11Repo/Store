@@ -1,4 +1,4 @@
-<app-modal *ngIf="isShowed"></app-modal>
+<app-modal></app-modal>
 <app-header></app-header>
 <table class="table">
   <table class="table table-bordered">
@@ -18,15 +18,22 @@
         <td class="description">{{ product.description }}</td>
         <td>$ {{ product.price }}</td>
         <td class="manage">
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-toggle="modal"
-            data-target="#exampleModal"
-            (click)="handleEdit(product.id)"
-          >
-            Edit Item
-          </button>
+          <div class="buttons-container">
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="handleEdit(product.id)"
+            >
+              Edit Item
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="handleDelete(product.id)"
+            >
+              Delete Item
+            </button>
+          </div>
         </td>
       </tr>
     </tbody>
