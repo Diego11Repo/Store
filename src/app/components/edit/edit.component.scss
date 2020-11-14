@@ -3,8 +3,12 @@
   justify-content: space-between;
   flex-direction: column;
   width: 40%;
-  height: 50vh;
+  height: 60vh;
   margin: 15px auto;
+
+  .description-container {
+    height: 200px;
+  }
 }
 .progress-spinner {
   display: flex;
