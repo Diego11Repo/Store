@@ -33,10 +33,21 @@
       height: 90px;
       align-items: center;
       justify-content: space-between;
+
+      @media (max-width: 1700px) {
+        width: 100%;
+      }
     }
 
     .btn {
       width: 75%;
+      @media (max-width: 1700px) {
+        width: 100%;
+      }
+
+      @media (max-width: 1200px) {
+        font-size: 10px;
+      }
     }
   }
 }

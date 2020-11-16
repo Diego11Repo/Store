@@ -11,9 +11,6 @@ import { ProductsComponent } from './components/products/products.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './components/login/login.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
-import { PromotionsComponent } from './components/promotions/promotions.component';
-import { MostLikedComponent } from './components/most-liked/most-liked.component';
-import { BooksComponent } from './components/books/books.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { EditComponent } from './components/edit/edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,9 +25,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ProductsComponent,
     LoginComponent,
     WelcomeComponent,
-    PromotionsComponent,
-    MostLikedComponent,
-    BooksComponent,
     ModalComponent,
     EditComponent,
   ],
